@@ -2593,7 +2593,8 @@
         "nixpkgs": [
           "haskell-nix",
           "nixpkgs"
-        ]
+        ],
+        "systems": "systems_6"
       }
     },
     "rust-analyzer-src": {
@@ -2954,6 +2955,19 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "systems_6": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-q90lkg22MibZ7De+yKYU9mO+zisSDgZbU/Hl+Xwi1BI=",
+        "path": "./nix/systems.nix",
+        "type": "path"
+      },
+      "original": {
+        "path": "./nix/systems.nix",
+        "type": "path"
       }
     },
     "treefmt-nix": {

@@ -13,6 +13,9 @@
     };
 
     nixpkgs.follows = "haskell-nix/nixpkgs";
+    # This allows for downstream to include different systems
+    systems.url = "path:./nix/systems.nix";
+    systems.flake = false;
 
     hackage = {
       url = "github:input-output-hk/hackage.nix";
@@ -39,7 +42,7 @@
   outputs = inputs: inputs.iogx.lib.mkFlake {
     inherit inputs;
     repoRoot = ./.;
-    systems = [ "x86_64-linux" "x86_64-darwin" ];
+    systems = import inputs.systems;
     outputs = import ./nix/outputs.nix;
   };
 
